@@ -15,7 +15,7 @@ jobs:
       - name: Run tests and collect coverage
         run: npm run test
       - name: Run Jest with JUnit Export
-        run: JEST_JUNIT_CLASSNAME="{filepath}" jest --reporters=jest-junit
+        run: JEST_JUNIT_CLASSNAME="{filepath}" npx jest --reporters=jest-junit
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v5
         env:
